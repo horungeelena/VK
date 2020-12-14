@@ -1,16 +1,45 @@
 package domain;
 
 public class CommentsInfo {
-    private boolean canPost;
-    private int quantity;
-    private int commentsInfo;
-    private int attachPhoto;
-    private int video;
-    private int audioRecording;
-    private int file;
-    private int createPhoto;
-    private int smile;
-    private int sendingMessage;
+    private boolean canPost; // может ли текущий пользователь комментировать запись
+    private int quantity; // количество комментариев
+    private int commentsInfo; // текст комментария
+    private int attachPhoto; // прикрепить фото
+    private int video; // прикрепить видео
+    private int audioRecording; // прикрепить аудиозапись
+    private int file; // прикрепить файл
+    private int createPhoto; // создать фото
+    private int smile; // прикрепить смайл
+    private int sendingMessage; // опубликовать запись
+
+    private int canPin; // может ли текущий пользователь закрепить запись
+    private int canDelete; // может ли текущий пользователь удалить запись
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(int canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    private int canEdit; // может ли текущий пользователь редактировать запись
 
     public boolean isCanPost() {
         return canPost;

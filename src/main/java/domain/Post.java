@@ -1,21 +1,78 @@
 package domain;
 
 public class Post {
-    private int id;
-    private int heading;
-    private int publicationDate;
-    private int postText;
-    private int complain;
-    private int saveToBookmarks;
-    private int picture;
-    private int like;
-    private int commentInfo;
+    private int id; // идентификатор записи
+    private int heading; // заголовок
+    private int publicationDate; // дата публикации
+    private int postText; // текст поста
+    private int complain; // пожаловаться на пост в службу поддержки
+    private int saveToBookmarks; // сохранить в закладки
+    private int picture; // прикрепить картинку
+    private int like; // лайки пользователей
+    private int commentInfo; // комментарии
     private CommentsInfo commentsInfo;
-    private int toShare;
-    private int viewed;
-    private int keep;
-    private int photoEditor;
-    private int openOriginal;
+    private int toShare; // поделиться записью
+    private int viewed; // количество просмотров поста
+    private int keep; // сохранить
+    private int photoEditor; // фото редактор
+    private int openOriginal; // открыть оригинал
+
+    private int search; // поиск
+    private int pinPost; // закрепить запись
+    private int ownerId; // идентификатор владельца стены опубликованной записи
+    private int replyOwnerId; // идентификатор владельца записи, в ответ на которую оставлена текущая
+    private int replyPostId; // идентификатор записи, в ответ на которую оставлена текущая
+
+    public int getSearch() {
+        return search;
+    }
+
+    public void setSearch(int search) {
+        this.search = search;
+    }
+
+    public int getPinPost() {
+        return pinPost;
+    }
+
+    public void setPinPost(int pinPost) {
+        this.pinPost = pinPost;
+    }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getReplyOwnerId() {
+        return replyOwnerId;
+    }
+
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+    private int friendsOnly; // запись создана с опцией "только для друзей"
+
 
     public int getId() {
         return id;

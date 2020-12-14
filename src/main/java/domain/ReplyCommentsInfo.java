@@ -1,18 +1,47 @@
 package domain;
 
 public class ReplyCommentsInfo {
-    private int reply;
-    private int publicationDate;
-    private int commentsInfo;
-    private int attachPhoto;
-    private int video;
-    private int audioRecording;
-    private int file;
-    private int createPhoto;
-    private int smile;
-    private int sendingMessage;
-    private int complain;
-    private int like;
+    private int reply; // репост записи
+    private int publicationDate; // дата репоста
+    private int commentsInfo; // текст репоста
+    private int attachPhoto; // прикрепить фото
+    private int video; // прикрепить видео
+    private int audioRecording; // прикрепить аудиозапись
+    private int file; // прикрепить файл
+    private int createPhoto; // создать фото
+    private int smile; // прикрепить смайл
+    private int sendingMessage; // опубликовать репост
+    private int complain; // пожаловаться на репост в службу поддержки
+    private int like; // лайки пользователей
+
+    private int canClose; // может ли текущий пользователь закрыть комментарии к записи
+    private int canOpen; // может ли текущий пользователь открыть комментарии к записи
+
+    public int getCanClose() {
+        return canClose;
+    }
+
+    public void setCanClose(int canClose) {
+        this.canClose = canClose;
+    }
+
+    public int getCanOpen() {
+        return canOpen;
+    }
+
+    public void setCanOpen(int canOpen) {
+        this.canOpen = canOpen;
+    }
+
+    public int getCanPost() {
+        return canPost;
+    }
+
+    public void setCanPost(int canPost) {
+        this.canPost = canPost;
+    }
+
+    private int canPost; // может ли текущий польователь комментировать запись
 
     public int getReply() {
         return reply;
