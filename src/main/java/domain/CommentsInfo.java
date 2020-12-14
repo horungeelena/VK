@@ -12,24 +12,8 @@ public class CommentsInfo {
     private int smile; // прикрепить смайл
     private int sendingMessage; // опубликовать запись
 
-    private int canPin; // может ли текущий пользователь закрепить запись
-    private int canDelete; // может ли текущий пользователь удалить запись
-
-    public int getCanPin() {
-        return canPin;
-    }
-
-    public void setCanPin(int canPin) {
-        this.canPin = canPin;
-    }
-
-    public int getCanDelete() {
-        return canDelete;
-    }
-
-    public void setCanDelete(int canDelete) {
-        this.canDelete = canDelete;
-    }
+    private boolean canPin; // может ли текущий пользователь закрепить запись
+    private boolean canDelete; // может ли текущий пользователь удалить запись
 
     public int getCanEdit() {
         return canEdit;
@@ -119,5 +103,21 @@ public class CommentsInfo {
 
     public void setSendingMessage(int sendingMessage) {
         this.sendingMessage = sendingMessage;
+    }
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
     }
 }

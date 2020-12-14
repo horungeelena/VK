@@ -14,24 +14,8 @@ public class ReplyCommentsInfo {
     private int complain; // пожаловаться на репост в службу поддержки
     private int like; // лайки пользователей
 
-    private int canClose; // может ли текущий пользователь закрыть комментарии к записи
-    private int canOpen; // может ли текущий пользователь открыть комментарии к записи
-
-    public int getCanClose() {
-        return canClose;
-    }
-
-    public void setCanClose(int canClose) {
-        this.canClose = canClose;
-    }
-
-    public int getCanOpen() {
-        return canOpen;
-    }
-
-    public void setCanOpen(int canOpen) {
-        this.canOpen = canOpen;
-    }
+    private boolean canClose; // может ли текущий пользователь закрыть комментарии к записи
+    private boolean canOpen; // может ли текущий пользователь открыть комментарии к записи
 
     public int getCanPost() {
         return canPost;
@@ -137,5 +121,21 @@ public class ReplyCommentsInfo {
 
     public void setLike(int like) {
         this.like = like;
+    }
+
+    public boolean isCanClose() {
+        return canClose;
+    }
+
+    public void setCanClose(boolean canClose) {
+        this.canClose = canClose;
+    }
+
+    public boolean isCanOpen() {
+        return canOpen;
+    }
+
+    public void setCanOpen(boolean canOpen) {
+        this.canOpen = canOpen;
     }
 }

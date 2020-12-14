@@ -11,6 +11,8 @@ public class Post {
     private int like; // лайки пользователей
     private int commentInfo; // комментарии
     private CommentsInfo commentsInfo;
+    private Likes likes;
+    private ReplyCommentsInfo reply;
     private int toShare; // поделиться записью
     private int viewed; // количество просмотров поста
     private int keep; // сохранить
@@ -22,6 +24,22 @@ public class Post {
     private int ownerId; // идентификатор владельца стены опубликованной записи
     private int replyOwnerId; // идентификатор владельца записи, в ответ на которую оставлена текущая
     private int replyPostId; // идентификатор записи, в ответ на которую оставлена текущая
+
+    public Likes getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Likes likes) {
+        this.likes = likes;
+    }
+
+    public ReplyCommentsInfo getReply() {
+        return reply;
+    }
+
+    public void setReply(ReplyCommentsInfo reply) {
+        this.reply = reply;
+    }
 
     public int getSearch() {
         return search;
